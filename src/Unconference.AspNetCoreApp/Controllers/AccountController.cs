@@ -109,7 +109,7 @@ namespace Unconference.AspNetCoreApp.Controllers
                 {
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    UserName = model.Email,
+                    UserName = model.FirstName + " " + model.LastName,
                     Email = model.Email
                 };
                 var result = await _userManager.CreateAsync(user, model.Password);

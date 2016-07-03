@@ -13,17 +13,23 @@ namespace Unconference.AspNetCoreApp.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public ActionResult Meetups()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public ActionResult Sessions()
         {
-            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
 
+        public ActionResult Mission()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
             return View();
         }
 

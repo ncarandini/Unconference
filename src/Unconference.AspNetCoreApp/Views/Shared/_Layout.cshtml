@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Unconference.AspNetCoreApp</title>
+    <title>@ViewData["Title"] - OpenDomus</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,12 +26,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Unconference.AspNetCoreApp</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">OpenDomus</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Meetups">Incontri</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Sessions">Proposte</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Mission">Mission</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
@@ -42,7 +44,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2016 - Unconference.AspNetCoreApp</p>
+            <p>&copy; @DateTime.Now.Year - OpenDomus by Nicolò Carandini</p>
         </footer>
     </div>
 
