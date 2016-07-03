@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Unconference.AspNetCoreApp.Data;
 using Unconference.AspNetCoreApp.Models;
 using Unconference.AspNetCoreApp.Services;
+using Unconference.Core.Models;
 
 namespace Unconference.AspNetCoreApp
 {

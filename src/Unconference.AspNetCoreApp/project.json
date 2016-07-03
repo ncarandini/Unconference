@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-Unconference.AspNetCoreApp-d39edb4a-270b-4cf8-b537-ad18f8831ebd",
 
   "dependencies": {
@@ -42,7 +42,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "Unconference.Core": "1.0.0-*"
   },
 
   "tools": {

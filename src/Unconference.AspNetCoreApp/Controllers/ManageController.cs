@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Unconference.AspNetCoreApp.Models;
 using Unconference.AspNetCoreApp.Models.ManageViewModels;
 using Unconference.AspNetCoreApp.Services;
+using Unconference.Core.Models;
 
 namespace Unconference.AspNetCoreApp.Controllers
 {

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Unconference.AspNetCoreApp.Models;
+using Unconference.Core.Models;
 
 namespace Unconference.AspNetCoreApp.Data
 {
