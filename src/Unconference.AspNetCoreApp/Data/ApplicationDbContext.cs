@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Unconference.AspNetCoreApp.Models;
 using Unconference.Core.Models;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Unconference.AspNetCoreApp.Data
 {
@@ -16,12 +17,19 @@ namespace Unconference.AspNetCoreApp.Data
         {
         }
 
+        public DbSet<Meetup> Meetups { get; set; }
+        public DbSet<Session> Sessions { get; set; }
+        public DbSet<SessionVote> SessionVotes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
+
+            foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
         }
+
     }
 }
